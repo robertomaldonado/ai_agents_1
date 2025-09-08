@@ -26,6 +26,34 @@ If you add runtime dependencies to `pyproject.toml` under `project.dependencies`
 python main.py
 ```
 
+### Configure OpenAI
+
+You can provide your API key via any of the following methods (priority order):
+
+1. Environment variable:
+
+```bash
+export OPENAI_API_KEY="sk-your-key"
+python main.py
+```
+
+2. .env file (auto-loaded): create a file named `.env` in the project root:
+
+```bash
+echo "OPENAI_API_KEY=sk-your-key" > .env
+```
+
+3. Key file: save your API key to a file, default `.openai_key`:
+
+```bash
+echo "sk-your-key" > .openai_key
+python main.py
+```
+
+You can change the key file path by setting `OPENAI_API_KEY_FILE`.
+
+You'll be prompted for a message; the app will call OpenAI (`gpt-4o-mini`) and print the assistant's reply.
+
 ### Development
 
 - Format/lint (add your preferred tools, e.g., ruff/black):
