@@ -1,0 +1,74 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python bytecode / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.env
+.env.*
+
+# Packaging / build
+build/
+dist/
+sdist/
+wheels/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+*.egg
+
+# Tooling caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.pytype/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.benchmarks/
+.cache/
+
+# Testing
+pytest-debug.log
+nosetests.xml
+test-results/
+
+# Type checkers / linters
+pyrightconfig.json
+pyrightcache/
+pyre/
+
+# Editors / IDE
+.idea/
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+logs/
+
+# OS / Misc
+Thumbs.db
+Desktop.ini
+
+# Poetry / PDM (keep lockfile tracked; ignore local venvs)
+.pdm.toml
+.pdm-python
+.python-version
+
+
