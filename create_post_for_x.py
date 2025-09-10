@@ -5,22 +5,9 @@ from typing import Optional
 from openai import OpenAI
 from dotenv import load_dotenv
 
-
-# Resolve the OpenAI API key from environment or .env
-def get_api_key() -> Optional[str]:
-  load_dotenv(override=False)
-
-  key = os.environ.get("OPENAI_API_KEY")
-  if key:
-    return key.strip()
-
-
-# Create and return an OpenAI client using the provided API key.
-def get_client(api_key: str) -> OpenAI:
-  return OpenAI(api_key=api_key)
-
-
 # Send the user's message to OpenAI and return the assistant's reply text.
+
+
 def ask_openai(client: OpenAI, user_message: str) -> str:
   response = client.chat.completions.create(
       model="gpt-5-nano",
@@ -29,8 +16,7 @@ def ask_openai(client: OpenAI, user_message: str) -> str:
             "content": """You are an expert social media manager, and you excel at crafting viral and highly engaging posts for X (formerly Twitter).
             Your task is to generate a post that is concise, impactful, and tailored to the topic provided by the user.
             Avoid using hashtags and lots of emojis (a few emojis are okay, but not too many).
-            Keep the post short and focused, structure it in a clean, readable way, using line breaks and empty lines to enhance readability.
-            Keep up to 120 words long.
+            Keep the post short (200 words max) and focused, structure it in a clean, readable way, using line breaks and empty lines to enhance readability.
             """},
           {"role": "user",
            "content": f"""Here's the topic provided by the user for which you need to generate a post:
@@ -70,11 +56,10 @@ def generate_post(client: OpenAI, prompt: str) -> str:
 
 
 def main() -> None:
-  api_key = get_api_key()
-  validate_api_key(api_key)
-  client = get_client(api_key)
+  load_dotenv()
+  client = OpenAI()
 
-  prompt = input("Enter your prompt: ").strip()
+  prompt = input("Topic to generate a post: ").strip()
   validate_prompt(prompt)
 
   reply = generate_post(client, prompt)
