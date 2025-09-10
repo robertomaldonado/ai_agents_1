@@ -1,10 +1,18 @@
 [
   {
-    "topic": "Your topic",
-    "post": "Your post"
+    "topic": "How to protect your AI agent from prompt injection attacks",
+    "post": "Six design patterns help protect LLM agents from prompt injection attacks: Action-Selector limits responses to predefined actions, Plan-Then-Execute creates fixed plans before processing untrusted data, LLM Map-Reduce isolates processing of malicious inputs, Dual LLM separates privileged and quarantined models, Code-Then-Execute generates programs in sandboxed environments, and Context-Minimization removes potentially harmful prompts from conversation history. Each pattern offers different trade-offs between security and functionality."
   },
   {
-    "topic": "Your topic",
-    "post": "Your post"
+    "topic": "API Performance Improvement Tips",
+    "post": "Five proven strategies to boost API performance: caching to avoid repeated database queries, load balancing to distribute traffic across multiple servers, asynchronous processing for long-running tasks, pagination to limit response sizes, and connection pooling to reuse database connections efficiently. Each technique addresses specific bottlenecks and includes implementation guidance and real-world considerations."
+  },
+  {
+    "topic": "Documents: The architect programming language",
+    "post": "Software architects differ from senior developers by knowing how to deploy ideas to systems made of people, not just code to systems made of machines. The key skill is effective technical writing using documentation tools like Confluence or Notion. Good documents use bullet points for clarity, headers for organization, and chronological rather than topical structure. Essential document types include architecture overviews, dev designs, project proposals, developer forecasts, technology menus, problem statements, and postmortems. Each serves to orchestrate ideas across teams and stakeholders, enabling architects to drive consensus and decision-making at scale"
+  },
+  {
+    "topic": "How to Build a RAG Knowledge Base in Python for Customer Support",
+    "post": "A comprehensive guide to building a Retrieval-Augmented Generation (RAG) system for customer support using Python, LangChain, OpenAI, and SingleStore. The tutorial covers setting up a vector database, converting documents into embeddings, implementing semantic search, and generating contextual answers. Real-world case studies show 28.6% reduction in issue resolution time. The step-by-step implementation includes environment setup, database configuration, embedding creation, and API endpoint development for instant, accurate support responses."
   }
 ]
