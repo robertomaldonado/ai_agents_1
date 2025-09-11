@@ -44,7 +44,7 @@ class Invoice(BaseModel):
 
 
 def setup_database():
-  conn = sqlite3.connect("invoices.db")
+  conn = sqlite3.connect("invoices-pydantic.db")
   cursor = conn.cursor()
   cursor.execute('''
         CREATE TABLE IF NOT EXISTS invoices (
