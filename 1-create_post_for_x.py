@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 
 def ask_openai(client: OpenAI, user_message: str) -> str:
   response = client.chat.completions.create(
-      model="gpt-5-nano",
+      model="gpt-4o-mini",
       messages=[
           {"role": "system",
             "content": """You are an expert social media manager, and you excel at crafting viral and highly engaging posts for X (formerly Twitter).
